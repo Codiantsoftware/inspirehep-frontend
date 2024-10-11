@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: 0 !important;
+}
+::selection {
+  color: color(50);
+  background: color(500);
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  &-track {
+    -webkit-box-shadow: none;
+    background-color: #e2e5e6;
+  }
+  &-thumb {
+    -webkit-box-shadow: none;
+    background-color: color(500);
+  }
+  @include media-breakpoint-down(lg) {
+    width: 4px;
+    height: 4px;
+  }
+}
+

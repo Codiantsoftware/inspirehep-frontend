@@ -1,0 +1,192 @@
+header {
+    &.header {
+        padding: 0 12px;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #001529;
+        /* Or any background color you are using */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .header_menu_dropdown {
+        color: color(50);
+        cursor: pointer;
+    }
+
+    .ant-space-item {
+        a {
+            color: color(50);
+            padding-right: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    .header_searchBar {
+        .ant-select-selector {
+            border-radius: 2px !important;
+            background: #fafafa !important;
+            min-width: 110px;
+        }
+    }
+
+    .header_searchBar {
+        width: 100%;
+    }
+
+    .header_searchBar {
+        .ant-space-compact {
+            width: 100%;
+        }
+    }
+
+    .header_menu_right {
+        justify-content: center;
+
+        @media (min-width: 1200px) {
+            justify-content: flex-end;
+        }
+
+        span {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .header_searchBar {
+        .ant-select-compact-item {
+            &:hover {
+                .ant-select-selector {
+                    border-color: #d9d9d9 !important;
+                    box-shadow: none !important;
+                }
+            }
+
+            &.ant-select-open {
+                .ant-select-selector {
+                    color: red !important;
+                }
+            }
+        }
+
+        .ant-input-search {
+            .ant-input-group-addon {
+                button {
+                    border-radius: 2px;
+                    background-color: #1890ff;
+                    border-color: #1890ff;
+                    color: color(50);
+                    width: 48px;
+                    height: 40px;
+
+                    &:hover {
+                        background-color: #40a9ff;
+                        border-color: #40a9ff;
+                    }
+
+                    span {
+                        color: color(50);
+                    }
+                }
+            }
+
+            .ant-input-affix-wrapper {
+                height: 40px;
+            }
+        }
+
+        .ant-select-compact-item {
+            height: 40px;
+        }
+    }
+
+    .header_bottm_menu {
+        line-height: 23px;
+        padding: 5px 0 10px;
+
+        .header_menu_dropdown {
+
+            &.active,
+            &:hover {
+                border-bottom: 2px solid #fff;
+            }
+        }
+
+        a {
+            display: inline-flex;
+            color: #fff;
+            font-size: 16px;
+            line-height: normal;
+
+            &.active,
+            &:hover {
+                border-bottom: 2px solid #fff;
+            }
+        }
+
+        .ant-col {
+            &:not(:last-child) {
+                a {
+                    margin-right: 60px;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 1199px) {
+        &.header {
+            padding-top: 12px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+
+        .header_menu_right {
+            line-height: normal;
+            padding: 12px 0;
+        }
+
+        .header_bottm_menu {
+            padding: 2px 0 10px;
+
+            .ant-col {
+                &:not(:last-child) a {
+                    margin-right: 20px;
+                }
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .ant-space-item {
+            a {
+                padding-right: 0;
+            }
+        }
+
+        .ant-space-item {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+}

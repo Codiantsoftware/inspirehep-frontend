@@ -1,0 +1,40 @@
+// dropdown
+.custom-dropdown {
+    .ant-dropdown-menu {
+        background-color: color(800);
+        min-width: 160px;
+        border-radius: 2px;
+
+        span {
+            color: color(50);
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .ant-dropdown-menu-item {
+            padding: 9px 10px;
+        }
+    }
+
+    &.custom-dropdown-bottom {
+        .ant-dropdown-menu {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        &.custom-dropdown-bottom {
+            .ant-dropdown-menu {
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

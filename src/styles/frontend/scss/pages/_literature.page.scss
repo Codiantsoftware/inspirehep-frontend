@@ -1,0 +1,218 @@
+.literaturePage {
+  padding: 30px 0 25px;
+  .container {
+    max-width: 1390px;
+  }
+  .ant-list-item {
+    border: 0;
+  }
+  .ant-col {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .card {
+    background-color: color(50);
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+    height: calc(100% - 40px);
+    .ant-typography {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba($color: color(900), $alpha: 0.8);
+      display: block;
+    }
+    &_title {
+      &.ant-typography {
+        font-size: 21px;
+      }
+    }
+    &_subTitle {
+      &.ant-typography {
+        font-size: 18px;
+      }
+    }
+    &_title,
+    &_subTitle {
+      &.ant-typography {
+        margin: 0 0 8px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: rgba($color: color(900), $alpha: 0.9);
+      }
+    }
+    &_tag {
+      .ant-spin-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 15px;
+      }
+      .ant-list-item {
+        padding: 0;
+      }
+      .ant-tag-processing {
+        color: #096dd9;
+        background: #e6f7ff;
+        border-color: #91d5ff;
+      }
+      .ant-tag {
+        margin-inline-end: 0px;
+      }
+    }
+    &_list {
+      .ant-list-item {
+        padding: 12px 0;
+        color: rgba($color: color(900), $alpha: 0.8);
+      }
+      &_inner {
+        width: 100%;
+      }
+      .count {
+        flex-shrink: 0;
+        margin-right: 35px;
+      }
+      .edit {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        .ant-typography,
+        .anticon {
+          color: rgba($color: color(900), $alpha: 0.32);
+        }
+        .anticon {
+          margin-right: 8px;
+        }
+      }
+      .name {
+        padding-right: 10px;
+        .title {
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 500;
+        }
+        .ant-list-item {
+          display: inline-flex;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+  }
+  &_list {
+    .ant-spin-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    a {
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+  a {
+    color: #0050b3;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #40a9ff;
+      .ant-typography {
+        color: #40a9ff;
+      }
+    }
+  }
+  &_btns {
+    margin-top: 8px;
+    a {
+      display: inline-flex;
+      align-items: center;
+      color: rgba($color: color(900), $alpha: 0.8);
+      line-height: 32px;
+      &.disabled {
+        .ant-typography {
+          color: rgba($color: color(900), $alpha: 0.25);
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      .anticon {
+        margin-right: 8px;
+        font-size: 16px;
+      }
+    }
+  }
+  &_inner {
+    margin: 16px 0 10px;
+  }
+  .ant-empty-description {
+    .ant-typography {
+      color: rgba($color: color(900), $alpha: 0.25);
+    }
+  }
+  a {
+    &.disabled {
+      cursor: not-allowed;
+      color: rgba($color: color(900), $alpha: 0.25);
+      .ant-typography {
+        color: rgba($color: color(900), $alpha: 0.25);
+      }
+    }
+  }
+  .ant-tabs-card {
+    .ant-tabs {
+      &-nav {
+        margin-bottom: 0;
+      }
+      &-tab {
+        border-radius: 2px 2px 0 0 !important;
+        background: #fafafa;
+        border: 1px solid #e8e8e8;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &-active {
+          background-color: #ffffff;
+          color: #1890ff;
+        }
+      }
+      &-tabpane {
+        .card {
+          border-top: 0;
+        }
+      }
+    }
+  }
+  .ant-pagination {
+    margin-top: 16px;
+  }
+  @include media-breakpoint-up(lg) {
+    .card {
+      &_list {
+        padding-right: 35px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .card {
+      &_title{
+        &.ant-typography{
+            font-size: 18px;
+        }
+      }
+      &_list{
+        .count{
+            margin-right: 15px;
+        }
+        .edit{
+            margin-left: auto;
+            margin-top: 5px;
+        }
+      }
+      
+    &_pagination{
+        overflow-x: auto;
+        padding-bottom: 8px;
+        .ant-pagination-total-text{
+            display: none;
+        }
+    }
+    }
+  }
+}

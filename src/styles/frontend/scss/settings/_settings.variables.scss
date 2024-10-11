@@ -1,0 +1,21 @@
+//path
+$fonturl: "../../fonts";
+$imageurl: "../../images";
+
+// color variables
+$colors: (
+  50:  #FFFFFF,
+  60:  #f0f2f5,
+  500: #0050b3,
+  800: #001529,
+  900: #000000,
+);
+
+@function color($color-name, $color-variant: null) {
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}

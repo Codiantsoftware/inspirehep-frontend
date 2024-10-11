@@ -1,0 +1,112 @@
+.footer {
+  background-color: color(800);
+  color: color(50);
+  &_inner {
+    padding: 80px 0 20px;
+  }
+  &_column {
+    margin-bottom: 60px;
+    .ant-list-item {
+      margin: 12px 0;
+      padding: 0;
+      border: 0;
+      a {
+        &.ant-typography {
+          color: rgba($color: color(50), $alpha: 0.90);
+          font-size: 14px;
+          line-height: 1.5;
+          &:hover {
+            color: #40a9ff;
+          }
+        }
+      }
+    }
+  }
+  &_heading {
+    &.ant-typography {
+      color: color(50);
+      font-size: 16px;
+      margin: 0 auto 24px;
+      font-weight: 500;
+    }
+  }
+  &_copyRight {
+    border-top: 1px solid rgba($color: color(50), $alpha: 0.25);
+    padding: 16px 0;
+    .ant-typography {
+      line-height: 32px;
+      font-size: 16px;
+      color: rgba($color: color(50), $alpha: 0.9);
+    }
+    &_txt {
+      &.ant-typography {
+        color: rgba($color: color(50), $alpha: 0.4);
+        span {
+          color: rgba($color: color(50), $alpha: 1);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &_copyRight{
+      padding: 15px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &_inner {
+      padding: 40px 0px 15px;
+    }
+    &_column {
+      margin-bottom: 40px;
+      .ant-list-item {
+        margin: 10px 0;        
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &_inner {
+      padding: 30px 15px 15px;
+    }
+    &_copyRight{
+      .ant-typography {
+        line-height: normal;
+        font-size: 14px;
+      }
+    }
+    &_column {
+      width: 25%;
+      margin-bottom: 20px;
+    }
+    &_heading {
+      &.ant-typography {
+        font-size: 15px;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &_column {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+    &_copyRight{
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+      .ant-typography{
+        display: block;
+        + .ant-typography{
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &_column {
+      width: 100%;
+    }
+    &_copyRight{
+      padding: 10px 15px;
+    }
+  }
+}

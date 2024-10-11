@@ -1,0 +1,13 @@
+.ant-select{
+    &.ant-select-single {
+        .ant-select-selector{
+            border-radius: 0px;
+        }
+    }
+}
+.ant-select-dropdown{
+    border-radius: 0px;
+    .ant-select-item{
+        border-radius: 0px;
+    }
+}

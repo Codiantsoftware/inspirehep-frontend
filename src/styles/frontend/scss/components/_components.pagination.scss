@@ -1,0 +1,12 @@
+.ant-pagination{   
+    li{
+        &.ant-pagination-item{
+            border-radius: 0px;
+        }
+        &.ant-pagination-next,&.ant-pagination-prev{
+            .ant-pagination-item-link{
+                border-radius: 0px;
+            }
+        }        
+    }    
+}

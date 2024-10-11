@@ -1,0 +1,135 @@
+.homePage{   
+    .listSec{
+        &_inner{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .listBox{
+        &_head{
+            padding: 12px 0px;           
+            &_lft{
+                &_items{
+                    &:not(:last-child){
+                        margin-right: 10px;
+                        padding-right: 10px;
+                        border-right: 1px solid rgba($color: color(900), $alpha: 0.80);
+                    }
+                }
+            }
+            &_rht{
+                &_summary{
+                    padding-right: 8px;
+                    &_txt{
+                        padding-right: 8px;
+                    }
+                }
+            }
+            &_result{
+                color: color(800);                
+            }
+            &_btn{
+                color: rgba($color: color(900), $alpha: 0.25);       
+                &:not(:disabled):not(.ant-btn-disabled):hover{
+                    color: rgba($color: color(900), $alpha: 0.25); 
+                }         
+            }
+        }
+        &_body{
+            &_title{
+                &.ant-typography{
+                    font-size: 18px;
+                    color: rgba($color: color(900), $alpha: 0.90);
+                    line-height: 26px;
+                    margin: 0 0 8px;
+                    a{
+                        color: rgba($color: color(900), $alpha: 0.90);
+                        &:hover{
+                            color: #40a9ff;
+                        }
+                    }
+                }
+            }
+            &_numtxt{
+                min-width: 30px;
+                text-align: right;
+            }
+            &_links{
+                margin-bottom: 8px;
+                &_items{
+                    &:not(:last-child){
+                        margin-right: 5px;                        
+                    }
+                    a{                   
+                        .ant-typography{
+                            color: color(500);
+                        }
+                        &:hover{
+                            .ant-typography{
+                                color: #40a9ff;
+                            }                       
+                        }
+                    }
+                }
+                
+            }
+            &_publish{
+                margin: 8px 0px;                
+            }
+            &_btns{
+                margin-top: 8px;
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    color: rgba($color: color(900), $alpha: 0.80);
+                    line-height: 32px;
+                    &:hover{
+                        color: #40a9ff;
+                        .ant-typography{
+                            color: #40a9ff;
+                        }
+                    }
+                    &.disabled{
+                        cursor: not-allowed;
+                        color: rgba($color: color(900), $alpha: 0.25);
+                        .ant-typography{
+                            color: rgba($color: color(900), $alpha: 0.25);
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-right: 30px;
+                    }
+                    .anticon {
+                        margin-right: 8px;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .ant-card{
+                border-radius: 0px;
+                border-color: #e8e8e8;
+                margin-bottom: 8px;
+                &-body{ 
+                    padding: 8px;
+                }
+            }
+        }
+        &_foot{
+            margin-bottom: 8px;
+        }
+        @include media-breakpoint-down(md) {
+            &_head{
+                display: block;
+                &_lft{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            &_foot{
+                overflow: auto;
+                    padding-bottom: 8px;
+            }
+        }
+    }    
+}
